@@ -5,13 +5,12 @@
 def pascal_triangle(n):
     """this function prints out the sequence of pascal's triangle
         given a sequence count n"""
+    if (n <= 0):
+        return []
     start_matrix = [[0 for _ in range(n)] for _ in range(n)]
     end_matrix = [[] for _ in range(n)]
     start_matrix[0][0] = 1
     end_matrix[0].append(1)
-
-    if (n <= 0):
-        return []
 
     for i in range(n):
         for j in range(i + 1):
@@ -23,4 +22,3 @@ def pascal_triangle(n):
                 end_matrix[i].append(up + up_left)
 
     return end_matrix
-
