@@ -39,7 +39,6 @@ def canUnlockAll(boxes):
     if (not len(boxes)):
         return False
     num_boxes = len(boxes)
-    boxes = [set(i) for i in boxes]
     visited = [False] * num_boxes
     visited[0] = True
 
@@ -50,7 +49,7 @@ def canUnlockAll(boxes):
         try:
             u = queue.dequeue()
             for i in boxes[u]:
-                if (not visited[i] and i < num_boxes):
+                if (not visited[i] and 0 <= i < num_boxes):
                     visited[i] = True
                     queue.enqueue(i)
         except Exception as _:
