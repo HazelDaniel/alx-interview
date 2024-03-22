@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-def minOps(number):
+"""attempts to provide a N(log(N)) solution to find minimum number of
+    'copy-and-paste' to get from 1 to a number"""
+
+
+def minOperations(n):
+    """the n(log(n)) solution"""
+    number = n
     res = 0
     i = 2
     while i <= number:
