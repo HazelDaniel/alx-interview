@@ -21,7 +21,7 @@ def validUTF8(data):
 
             if bit_count == 0:
                 continue
-            if bit_count == 1 or bit_count > 6:
+            if bit_count == 1 or bit_count > 4:
                 return False
         else:
             """one last check: if the current byte has format 10xxxxxx"""
