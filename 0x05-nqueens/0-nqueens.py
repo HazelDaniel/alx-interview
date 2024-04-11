@@ -38,9 +38,7 @@ class Nqueens:
     def backtrack(self, r):
         """the main backtracking algorithm used in the n-queens solution"""
         if (r == self.nums):
-            result_board = list(self.hash.values())
-            if len(result_board) == self.nums:
-                self.res.append(result_board)
+            self.res.append(list(self.hash.values()))
             self.hash = dict()
             return
 
