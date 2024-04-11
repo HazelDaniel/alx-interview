@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """this module attempts to solve the nqueens problem"""
 
 import sys
