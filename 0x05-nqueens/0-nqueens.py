@@ -62,6 +62,7 @@ class Nqueens:
 
 
 def main():
+    """the entry point into the program"""
     if __name__ != "__main__":
         return
     if (len(sys.argv) < 2):
